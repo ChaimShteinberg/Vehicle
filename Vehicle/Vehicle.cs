@@ -38,8 +38,9 @@ namespace Vehicle
 
     public class Truck : Vehicle, IRefuelable
     {
-        public Truck(string model):base (model)
+        public Truck(string model) : base(model)
         {
+            this.model = model;
         }
 
         public override void Drive()
@@ -55,7 +56,7 @@ namespace Vehicle
 
     public class Motorcycle: Vehicle, IRefuelable
     {
-        public Motorcycle(string model)
+        public Motorcycle(string model) : base (model)
         {
             this.model = model;
         }
@@ -73,7 +74,7 @@ namespace Vehicle
 
     public class Car: Vehicle, IRefuelable
     {
-        public Car(string model)
+        public Car(string model) : base (model)
         {
             this.model = model;
         }
