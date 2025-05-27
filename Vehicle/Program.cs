@@ -12,7 +12,6 @@ namespace Vehicle
         static void Main(string[] args)
         {
             Truck myTruck = new Truck("a");
-            Console.WriteLine(myTruck.GetModel());
         }
     }
 }
