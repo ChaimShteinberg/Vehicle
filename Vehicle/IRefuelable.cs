@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Vehicle
 {
-    internal interface IRefuelable
+    interface IRefuelable
     {
+        void Refuel();
     }
 }

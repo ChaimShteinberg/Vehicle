@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace Vehicle
 {
-    public class Motorcycle
+    internal class Motorcycle : Vehicle, IRefuelable
     {
+        public Motorcycle(string model) : base(model)
+        {
+            this.model = model;
+        }
+
+        public override void Drive()
+        {
+            Console.WriteLine("The motorcycle is driving.");
+        }
+
+        public void Refuel()
+        {
+            Console.WriteLine("Fueling the motorcycle");
+        }
     }
 }

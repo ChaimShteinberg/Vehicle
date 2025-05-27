@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vehicle
 {
-    public abstract class Vehicle
+    internal abstract class Vehicle
     {
         public Vehicle(string model)
         {
@@ -28,65 +28,6 @@ namespace Vehicle
         public void ChangeModel(string model)
         {
             this.model = model;
-        }
-    }
-
-    interface IRefuelable
-    {
-        void Refuel();
-    }
-
-    public class Truck : Vehicle, IRefuelable
-    {
-        public Truck(string model) : base(model)
-        {
-            this.model = model;
-        }
-
-        public override void Drive()
-        {
-            Console.WriteLine("The truck is driving.");
-        }
-
-        public void Refuel()
-        {
-            Console.WriteLine("Fueling the truck");
-        }
-    }
-
-    public class Motorcycle: Vehicle, IRefuelable
-    {
-        public Motorcycle(string model) : base (model)
-        {
-            this.model = model;
-        }
-
-        public override void Drive()
-        {
-            Console.WriteLine("The motorcycle is driving.");
-        }
-
-        public void Refuel()
-        {
-            Console.WriteLine("Fueling the motorcycle");
-        }
-    }
-
-    public class Car: Vehicle, IRefuelable
-    {
-        public Car(string model) : base (model)
-        {
-            this.model = model;
-        }
-
-        public override void Drive()
-        {
-            Console.WriteLine("The car is driving.");
-        }
-        
-        public void Refuel()
-        {
-            Console.WriteLine("Fueling the car");
         }
     }
 }
